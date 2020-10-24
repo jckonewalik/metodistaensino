@@ -1,0 +1,7 @@
+liquibase.change-log: classpath:liquibase-changeLog.xml
+spring:
+  datasource:
+    url:  jdbc:postgresql://${METODISTA_DB_SERVER}:${METODISTA_DB_PORT}/${METODISTA_DB}
+    username: ${METODISTA_DB_USER}
+    password: ${METODISTA_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver

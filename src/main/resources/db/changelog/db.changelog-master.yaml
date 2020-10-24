@@ -1,0 +1,8 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  liquibase
+
+  -  include:
+       -  file:  db.changelog-create-students-table.yaml
+       -  relativeToChangelogFile:  true

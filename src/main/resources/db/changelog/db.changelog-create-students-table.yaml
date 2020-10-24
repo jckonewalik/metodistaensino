@@ -1,0 +1,48 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  create-students-table
+       author:  jckonewalik
+       changes:
+         -  createTable:
+              tableName:  students
+              columns:
+                -  column:
+                     name:  id
+                     type:  uuid
+                     autoIncrement:  false
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  first_name
+                     type:  varchar(50)
+                     constraints:
+                       nullable:  false
+                -  column:
+                     name:  last_name
+                     type:  varchar(50)
+                -  column:
+                     name:  birth_date
+                     type:  date
+                -  column:
+                     name:  gender
+                     type:  varchar(10)
+                -  column:
+                     name:  phone_number
+                     type:  varchar(50)
+                -  column:
+                     name:  create_date
+                     type:  datetime
+                     constraints:
+                       nullable:  false
+                -  column:
+                     name:  create_user
+                     type:  varchar(100)
+                     constraints:
+                       nullable:  false
+                -  column:
+                     name:  update_date
+                     type:  datetime
+                -  column:
+                     name:  update_user
+                     type:  varchar(100)
