@@ -5,7 +5,5 @@ import java.time.LocalDate
 class NewStudentDTO (val firstName: String
                      , val lastName: String
                      , val birthDate: LocalDate
-                     , val gender: String
-                     , val phoneNumber: String){
-
-}
+                     , val gender: Gender
+                     , val phoneNumber: String)

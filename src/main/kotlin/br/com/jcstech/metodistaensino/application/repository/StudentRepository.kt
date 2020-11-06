@@ -1,8 +1,14 @@
 package br.com.jcstech.metodistaensino.application.repository
 
 import br.com.jcstech.metodistaensino.domain.Student
-import org.springframework.data.jpa.repository.JpaRepository
-import java.util.*
+import br.com.jcstech.metodistaensino.domain.persistence.StudentDO
+import org.springframework.stereotype.Component
 
-interface StudentRepository: JpaRepository<Student, UUID> {
+@Component
+class StudentRepository (val repository: IStudentRepository) {
+
+    fun save(student: Student) {
+        repository.save(StudentDO.fromStudent(student))
+    }
+
 }

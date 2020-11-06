@@ -6,13 +6,11 @@ import java.util.*
 import javax.persistence.Entity
 import javax.persistence.Id
 
-@Entity(name = "students")
 class Student(
-        val firstName: String
-        , val lastName: String
-        , val birthDate: LocalDate
-        , val gender: String
-        , val phoneNumber: String) {
+        val fullName: FullName
+        , val birthDate: BirthDate
+        , val gender: Gender
+        , val phoneNumber: PhoneNumber) {
 
     @Id
     val id: UUID = UUID.randomUUID()
@@ -21,5 +19,4 @@ class Student(
     val createUser = "jckonewalik@gmail.com"
     val updateDate = LocalDateTime.now()
     val updateUser = "jckonewalik@gmail.com"
-
 }
